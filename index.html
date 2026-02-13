@@ -1,0 +1,273 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #9D4EDD 0%, #5A189A 50%, #3A0CA3 100%);
+        padding: 60px 20px;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(157, 78, 221, 0.3);
+    }
+
+    .header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+
+    .header .tagline {
+        font-size: 1.3rem;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .container {
+        max-width: 1200px;
+        align-self: center;
+        margin: 0;
+        padding: 40px 0;
+    }
+
+    .section {
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #9D4EDD;
+        font-weight: 700;
+    }
+
+    .intro-text {
+        background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
+        padding: 40px;
+        border-radius: 15px;
+        border-left: 5px solid #9D4EDD;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        margin-bottom: 50px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .feature-card {
+        background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
+        padding: 35px;
+        border-radius: 15px;
+        border: 1px solid #3a3a3a;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: #9D4EDD;
+        box-shadow: 0 12px 32px rgba(157, 78, 221, 0.2);
+    }
+
+    .feature-card h3 {
+        color: #9D4EDD;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .feature-card p {
+        color: #cccccc;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .why-section {
+        background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
+        padding: 50px;
+        border-radius: 15px;
+        border: 1px solid #3a3a3a;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .why-item {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+    .why-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .why-item h4 {
+        color: #9D4EDD;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .why-item p {
+        color: #cccccc;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #9D4EDD 0%, #7209B7 100%);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(157, 78, 221, 0.3);
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(157, 78, 221, 0.4);
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 50px;
+        background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
+        border-radius: 15px;
+        border: 2px solid #9D4EDD;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #cccccc;
+    }
+
+    @media (max-width: 768px) {
+        .header h1 {
+            font-size: 2.5rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .intro-text {
+            padding: 25px;
+        }
+
+        .why-section {
+            padding: 30px;
+        }
+    }
+</style>
+
+<div class="header">
+    <h1>Walking Cooler</h1>
+    <p class="tagline">Turn your daily steps into a team victory</p>
+</div>
+
+<div class="container">
+    <div class="intro-text">
+        <p>Walking Cooler is the official fitness and community app designed exclusively for the employees of Acuity Analytics. We're extending the "Water Cooler" outside, helping you stay active, connect with colleagues, and engage in some healthy competition. Whether you're going for a walk during lunch break or running a half marathon, every step counts towards your team's success.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Why Walking Cooler?</h2>
+        <div class="why-section">
+            <div class="why-item">
+                <h4>✨ Step Into Wellbeing</h4>
+                <p>Enhance your workday with effortless step tracking designed to prioritize your health. Every step matters, and we make it easy to track your progress.</p>
+            </div>
+            <div class="why-item">
+                <h4>👥 Team Up for Success</h4>
+                <p>You'll never walk alone! Form teams with your best buddies at work to tackle challenges together and motivate each other to reach new heights.</p>
+            </div>
+            <div class="why-item">
+                <h4>🏆 The Ultimate Leaderboard</h4>
+                <p>Track your progress in real-time. See which teams and people are leading and who you have to pass to earn that #1 spot in the company rankings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Features Built for You</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🔐 Seamless Work Login</h3>
+                <p>Sign in quickly and securely using your official work email. Get started in seconds and access all features instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Live Challenges</h3>
+                <p>Participate in seasonal company-wide walking events and challenges. Stay engaged with fresh, exciting competitions throughout the year.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Everything Counts</h3>
+                <p>By retrieving step data from Google Fit, your steps always get updated – no matter which device you use (Smartphone, Smartwatch, or similar).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to Start Walking?</h2>
+        <p>Don't just work hard – walk hard. Join Walking Cooler today and let's start moving together!</p>
+
+        <div class="download-buttons" style="text-align: center; margin-top: 20px;">
+            <a href="https://play.google.com/store" target="_blank" style="display: inline-block; margin-right: 12px;">
+                <img 
+                    src="./Images/google_play_badge.png" 
+                    alt="Get it on Google Play" 
+                    style="height: 50px; width: auto;"
+                >
+            </a>
+
+            <a href="https://www.apple.com/app-store/" target="_blank" style="display: inline-block; pointer-events: none; opacity: 0.6;">
+                <img 
+                    src="./Images/app_store_badge.png" 
+                    alt="Download on the App Store (coming soon)" 
+                    style="height: 50px; width: auto;"
+                >
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container" style="margin: 0 10px">
+        &copy; 2026 - <a href="./index.html">Walking Cooler</a> - <a href="./privacy/index.html">Privacy</a>
+    </div>
+</footer>
